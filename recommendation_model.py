@@ -582,7 +582,7 @@ plt.show()
 - Titik hijau menandai epoch terbaik berdasarkan validasi RMSE (nilai terendah)
 
 - Plot menunjukkan bahwa nilai RMSE training dan validasi cukup dekat dan stabil, menandakan model tidak overfitting atau underfitting parah.
-- `Best Epoch` berdasarkan Val RMSE adalah Epoch ke 11
+- `Best Epoch` berdasarkan Val RMSE adalah Epoch ke 17
 """
 
 resto_df = data_tourism_with_id
