@@ -458,10 +458,6 @@ print('Number of User: {}, Number of Resto: {}, Min Rating: {}, Max Rating: {}'.
     num_users, num_resto, min_rating, max_rating
 ))
 
-"""**Normalisasi Rating**
-> Rating diubah ke skala 0-1 agar proses training model lebih stabil dan sesuai dengan fungsi aktivasi sigmoid.
-"""
-
 data_collaborative_filtering = data_collaborative_filtering.sample(frac=1, random_state=42)
 data_collaborative_filtering
 
