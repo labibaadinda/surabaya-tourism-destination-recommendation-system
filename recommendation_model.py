@@ -9,7 +9,7 @@ Original file is located at
 # Surabaya Tourism Destination Recommendation System
 
 - Nama  : Labiba Adinda Zahwana
-- Email : labibaadinda
+- Email : labibaadinda11@gmail.com
 
 # Deskripsi Proyek
 
