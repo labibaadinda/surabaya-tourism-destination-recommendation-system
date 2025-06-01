@@ -66,10 +66,10 @@ from pathlib import Path
 """
 
 urls = [
-    'https://raw.githubusercontent.com/labibaadinda/indonesia-tourism-destination-recommendation-system/main/dataset/package_tourism.csv',
-    'https://raw.githubusercontent.com/labibaadinda/indonesia-tourism-destination-recommendation-system/main/dataset/tourism_rating.csv',
-    'https://raw.githubusercontent.com/labibaadinda/indonesia-tourism-destination-recommendation-system/main/dataset/tourism_with_id.csv',
-    'https://raw.githubusercontent.com/labibaadinda/indonesia-tourism-destination-recommendation-system/main/dataset/user.csv'
+    'https://raw.githubusercontent.com/labibaadinda/surabaya-tourism-destination-recommendation-system/main/dataset/package_tourism.csv',
+    'https://raw.githubusercontent.com/labibaadinda/surabaya-tourism-destination-recommendation-system/main/dataset/tourism_rating.csv',
+    'https://raw.githubusercontent.com/labibaadinda/surabaya-tourism-destination-recommendation-system/main/dataset/tourism_with_id.csv',
+    'https://raw.githubusercontent.com/labibaadinda/surabaya-tourism-destination-recommendation-system/main/dataset/user.csv'
 ]
 
 import pandas as pd
@@ -625,7 +625,7 @@ top_resto_user = (
         by = 'Place_Ratings',
         ascending=False
     )
-    .head(5)
+    .head(10)
     .Place_Id.values
 )
 
@@ -699,7 +699,7 @@ bulk_rekom = get_bulk_recommendations(
     item_decoder=resto_encoded_to_resto,
     user_item_df=data_collaborative_filtering,
     item_df=data_tourism_with_id,
-    top_k=5
+    top_k=10
 )
 
 # Contoh print rekomendasi user pertama
