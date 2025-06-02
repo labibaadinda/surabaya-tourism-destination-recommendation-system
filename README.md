@@ -5,7 +5,7 @@ Sistem rekomendasi telah menjadi komponen penting dalam kehidupan digital modern
 
 Permasalahan ini perlu segera diatasi dengan pengembangan sistem rekomendasi destinasi wisata yang cerdas dan personal. Sistem ini bertujuan untuk memberikan rekomendasi destinasi yang relevan berdasarkan preferensi pengguna dan karakteristik destinasi, sekaligus mengenalkan destinasi wisata yang kurang populer namun memiliki potensi menarik. Pendekatan ini tidak hanya meningkatkan kemudahan dalam perencanaan perjalanan wisatawan, tetapi juga mendukung pengembangan sektor pariwisata di Surabaya secara berkelanjutan.
 
-Berdasarkan penelitian oleh Chalkiadakis et al. (2023), penggunaan sistem rekomendasi dalam bidang pariwisata dapat meningkatkan efisiensi pencarian destinasi dan meningkatkan kepuasan pengguna secara signifikan. Selain itu, studi oleh Chanrueang et al. (2024) menunjukkan bahwa integrasi metode Collaborative Filtering dan Content-Based Filtering mampu menghasilkan rekomendasi yang lebih akurat dan personal di sektor wisata. Oleh karena itu, proyek ini mengadopsi pendekatan gabungan tersebut untuk mengatasi tantangan dalam memberikan rekomendasi destinasi wisata yang optimal.
+Berdasarkan penelitian oleh Chalkiadakis et al. (2023), penggunaan sistem rekomendasi dalam bidang pariwisata dapat meningkatkan efisiensi pencarian destinasi dan meningkatkan kepuasan pengguna secara signifikan. Selain itu, studi oleh Chanrueang et al. (2024) menunjukkan bahwa integrasi metode Collaborative Filtering dan Content-Based Filtering mampu menghasilkan rekomendasi yang lebih akurat dan personal di sektor wisata.
 
 ---
 
@@ -151,7 +151,9 @@ Kategori wisata yang tersedia antara lain:
 * Tempat Ibadah
 <br>
 <br>
+
 **Exploratory Data Analysis (EDA)**
+
 <br>
 <br>
     <p align='center'><img src="https://raw.githubusercontent.com/labibaadinda/surabaya-tourism-destination-recommendation-system/main/img/jumlah_rating.png" alt="jumlah rating" width="400" />
