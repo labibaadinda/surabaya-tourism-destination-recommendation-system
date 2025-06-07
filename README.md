@@ -398,7 +398,7 @@ array([[0., 0., 0., ..., 0., 0., 0.],
        [0., 0., 0., ..., 0., 0., 0.]])
 ```
 
-**Matriks TF-IDF** ini berisi representasi numerik dari teks yang ada di kolom **Tags** untuk setiap tempat wisata, yang **nantinya akan digunakan** untuk menghitung kemiripan antar tempat wisata menggunakan **Cosine Similarity** (di tahap). Matriks ini memungkinkan sistem untuk memahami dan membandingkan kemiripan antara item (dalam hal ini, tempat wisata) berdasarkan fitur teks yang telah diolah.
+**Matriks TF-IDF** ini berisi representasi numerik dari teks yang ada di kolom **Tags** untuk setiap tempat wisata, yang **nantinya akan digunakan** untuk menghitung kemiripan antar tempat wisata menggunakan **Cosine Similarity** (di tahap modeling). Matriks ini memungkinkan sistem untuk memahami dan membandingkan kemiripan antara item (dalam hal ini, tempat wisata) berdasarkan fitur teks yang telah diolah.
 
 ### **Preprocessing Collaborative Filtering**
 
