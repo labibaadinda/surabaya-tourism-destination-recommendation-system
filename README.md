@@ -109,7 +109,6 @@ Dataset `tourism_rating.csv`, data tersebut disimpan dalam dataframe data_touris
 * `Place_Id`: ID tempat wisata.
 * `Place_Ratings`: Nilai rating yang diberikan pengguna.
 <br>
-
 dtypes: int64(3) -> artinya ketiga kolom tersebut type data nya integer
 
 <br>
@@ -124,9 +123,7 @@ Dataset `tourism_with_id.csv`, data tersebut disimpan dalam dataframe data_touri
 * `Rating`: Rating rata-rata dari pengunjung.
 * `Time_Minutes`: Estimasi waktu kunjungan (banyak data kosong).
 * `Coordinate`, `Lat`, `Long`: Koordinat geografis tempat wisata.
-
 <br>
-
 dtypes: float64(5), int64(3), object(5) -> artinya terdapat 5 kolom bertype data float, 3 kolom bertipe data integer, dan 5 kolom bertipe categorical data
 
 <br>
@@ -136,7 +133,6 @@ Dataset `user.csv`, data tersebut disimpan dalam dataframe data_user.  Cek ukura
 * `Location`: Lokasi pengguna.
 * `Age`: Usia pengguna.
 <br>
-
 dtypes: int64(2), object(1) -> artinya 2 kolom bertipe integer, 1 kolom categorical data
 
 <br>
