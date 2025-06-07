@@ -735,7 +735,7 @@ def get_recommendations_for_user(model, user_id, user_encoder, item_encoder, ite
 
 **Menampilkan Rekomendasi untuk Pengguna Tertentu**
 
-Sekarang kita bisa mendapatkan rekomendasi untuk pengguna tertentu (misalnya pengguna dengan `User_Id = 123`).
+Sekarang kita bisa mendapatkan rekomendasi untuk pengguna tertentu (misalnya pengguna dengan `user_id = 123`).
 
 ```python
 recommendations = get_recommendations_for_user(
