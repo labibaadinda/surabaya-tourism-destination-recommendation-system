@@ -963,8 +963,7 @@ Grafik menunjukkan nilai RMSE training dan validasi yang cukup dekat dan stabil,
 
 ### **Kesimpulan Evaluasi**:
 
-Evaluasi menggunakan **Precision dan Recall** untuk Content-Based Filtering memberikan gambaran tentang relevansi rekomendasi berdasarkan data yang diketahui (true\_relevant). Sedangkan untuk **Collaborative Filtering**, grafik RMSE memberikan informasi tentang kualitas prediksi model terhadap data pengguna. Keduanya memiliki kekuatan dan keterbatasan masing-masing, namun bersama-sama mereka dapat menyediakan sistem rekomendasi yang lebih komprehensif.
-
+Evaluasi menggunakan **Precision dan Recall** untuk Content-Based Filtering memberikan gambaran tentang relevansi rekomendasi berdasarkan data yang diketahui (true\_relevant). Sedangkan untuk **Collaborative Filtering**, grafik RMSE memberikan informasi tentang kualitas prediksi model terhadap data pengguna. 
 ---
 
 ## Conclusion
