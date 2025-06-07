@@ -248,7 +248,7 @@ Data preparation adalah langkah penting dalam proses pembuatan model rekomendasi
    data_tourism_rating.drop_duplicates(inplace=True)
    ```
 
-   Setelah duplikasi dihapus, kita dapat memastikan data lebih akurat.
+   Setelah duplikasi dihapus, dapat memastikan data lebih akurat.
 
 2. **Memfilter Data Rating untuk Tempat Wisata di Surabaya**
 
@@ -315,7 +315,7 @@ data_content_based_filtering['Category'] = data_content_based_filtering['Categor
 
 #### 2. **Membuat Kolom 'Tags'**
 
-Setelah kedua kolom tersebut diproses, kita bisa menggabungkannya menjadi kolom **Tags** yang akan digunakan dalam analisis.
+Setelah kedua kolom tersebut diproses, bisa menggabungkannya menjadi kolom **Tags** yang akan digunakan dalam analisis.
 
 ```python
 # Menggabungkan 'Description' dan 'Category' menjadi kolom 'Tags'
@@ -326,7 +326,7 @@ Kolom **Tags** ini akan berisi kombinasi dari **Description** dan **Category** y
 
 #### 3. **Menghapus Kolom yang Tidak Diperlukan**
 
-Setelah kolom **Tags** dibentuk, kita menghapus kolom yang tidak diperlukan untuk analisis lebih lanjut.
+Setelah kolom **Tags** dibentuk, menghapus kolom yang tidak diperlukan untuk analisis lebih lanjut.
 
 ```python
 # Drop kolom yang tidak relevan
@@ -366,13 +366,13 @@ Kolom **Price**, **Place\_Ratings**, **Description**, **Category**, dan **City**
   **Contoh**: Jika kata "pantai" muncul di 20 dokumen dari 100 dokumen, maka **IDF** untuk kata "pantai" adalah $\log \left( \frac{100}{20} \right) = 1.69897$.
 
 * **TF-IDF:**
-  Setelah menghitung **TF** dan **IDF**, kita bisa menggabungkannya untuk menghitung **TF-IDF** kata dalam sebuah dokumen:
+  Setelah menghitung **TF** dan **IDF**, bisa menggabungkannya untuk menghitung **TF-IDF** kata dalam sebuah dokumen:
 
   $$\text{TF-IDF}(t, d) = \text{TF}(t, d) \times \text{IDF}(t)$$
 
   **Contoh**: Jika **TF** untuk kata "pantai" adalah 0.05 dan **IDF** untuk kata "pantai" adalah 1.69897, maka **TF-IDF** untuk kata "pantai" adalah $0.05 \times 1.69897 = 0.08495$.
 
-Hasil dari **TF-IDF** ini memberikan nilai yang lebih tinggi pada kata-kata yang sering muncul dalam suatu dokumen, tetapi jarang muncul di seluruh koleksi dokumen. Dengan cara ini, kita dapat menilai kata-kata yang lebih relevan dalam dokumen dibandingkan dengan kata-kata yang sering muncul di banyak dokumen dan tidak memberikan banyak informasi.
+Hasil dari **TF-IDF** ini memberikan nilai yang lebih tinggi pada kata-kata yang sering muncul dalam suatu dokumen, tetapi jarang muncul di seluruh koleksi dokumen. Dengan cara ini, dapat menilai kata-kata yang lebih relevan dalam dokumen dibandingkan dengan kata-kata yang sering muncul di banyak dokumen dan tidak memberikan banyak informasi.
 
 Untuk implementasi python code nya. Langkah berikutnya setelah data siap, adalah mengubah teks dalam kolom **Tags** menjadi representasi numerik dengan menggunakan **TF-IDF Vectorizer**.
 
@@ -412,7 +412,7 @@ data_collaborative_filtering = rating.copy()
 
 #### 2. **Proses Encoding untuk User dan Place**
 
-Pada langkah berikutnya, kita mengubah ID pengguna (`User_Id`) dan ID tempat wisata (`Place_Id`) menjadi indeks numerik agar bisa digunakan dalam model deep learning (RecommenderNet).
+Pada langkah berikutnya, mengubah ID pengguna (`User_Id`) dan ID tempat wisata (`Place_Id`) menjadi indeks numerik agar bisa digunakan dalam model deep learning (RecommenderNet).
 
 ```python
 user_ids = data_collaborative_filtering['User_Id'].unique().tolist()
@@ -430,7 +430,7 @@ place_encoded_to_place = {i: x for i, x in enumerate(place_ids)}
 
 #### 3. **Menambahkan Kolom User dan Place pada Dataframe**
 
-Kemudian, kita akan menambahkan kolom baru pada `data_collaborative_filtering` yang berisi ID yang telah dienkode.
+Kemudian, akan menambahkan kolom baru pada `data_collaborative_filtering` yang berisi ID yang telah dienkode.
 
 ```python
 data_collaborative_filtering['user'] = data_collaborative_filtering['User_Id'].map(user_to_user_encoded)
@@ -536,7 +536,7 @@ Hasil **similarity** adalah matriks yang menunjukkan kemiripan antar tempat wisa
 
 #### **Fungsi Rekomendasi Content-Based Filtering**
 
-Terakhir, kita membuat fungsi untuk memberikan rekomendasi **top-N** tempat wisata berdasarkan kemiripan yang dihitung menggunakan **Cosine Similarity**.
+Terakhir, membuat fungsi untuk memberikan rekomendasi **top-N** tempat wisata berdasarkan kemiripan yang dihitung menggunakan **Cosine Similarity**.
 
 ```python
 def recommend_place_content_based_filtering(place_name, similarity, data_content_based_filtering):
@@ -582,7 +582,7 @@ Place_Name
 
 #### Kesimpulan dari Content-Based Filtering:
 
-Content-Based Filtering memberikan rekomendasi berdasarkan kemiripan konten dari tempat wisata yang telah disukai atau dikunjungi oleh pengguna sebelumnya. Proses ini melibatkan tahap preprocessing data teks, penggunaan TF-IDF untuk merepresentasikan teks, dan penghitungan Cosine Similarity untuk menilai kemiripan antar tempat wisata. Pendekatan ini sangat berguna ketika kita ingin memberikan rekomendasi berdasarkan konten yang mirip, tanpa memerlukan data interaksi pengguna sebelumnya.
+Content-Based Filtering memberikan rekomendasi berdasarkan kemiripan konten dari tempat wisata yang telah disukai atau dikunjungi oleh pengguna sebelumnya. Proses ini melibatkan tahap preprocessing data teks, penggunaan TF-IDF untuk merepresentasikan teks, dan penghitungan Cosine Similarity untuk menilai kemiripan antar tempat wisata. Pendekatan ini sangat berguna ketika ingin memberikan rekomendasi berdasarkan konten yang mirip, tanpa memerlukan data interaksi pengguna sebelumnya.
 
 Selanjutnya, untuk mengevaluasi efektivitas dari sistem rekomendasi ini, akan dilakukan evaluasi menggunakan **Precision** dan **Recall** pada **Tahap Evaluasi**. **Precision** mengukur seberapa akurat rekomendasi yang diberikan (berapa banyak tempat wisata yang direkomendasikan benar-benar relevan dengan pengguna), sementara **Recall** mengukur seberapa banyak tempat wisata relevan yang berhasil ditemukan oleh sistem di antara semua tempat wisata relevan yang tersedia. Evaluasi ini penting untuk memastikan bahwa sistem rekomendasi dapat memberikan rekomendasi yang bermanfaat dan tepat sasaran.
 
@@ -621,7 +621,7 @@ class RecommenderNet(tf.keras.Model):
 
 #### **Melatih Model**
 
-Setelah model dibangun, kita dapat mulai melatihnya menggunakan data latih.
+Setelah model dibangun, dapat mulai melatihnya menggunakan data latih.
 
 ```python
 model.compile(
@@ -666,7 +666,7 @@ def get_bulk_recommendations(model, user_ids, user_encoder, item_encoder, item_d
 
 **Menampilkan Rekomendasi**
 
-Setelah mendapatkan rekomendasi untuk semua pengguna, kita dapat menampilkan rekomendasi untuk pengguna pertama sebagai contoh.
+Setelah mendapatkan rekomendasi untuk semua pengguna, dapat menampilkan rekomendasi untuk pengguna pertama sebagai contoh.
 
 ```python
 all_users = data_collaborative_filtering['User_Id'].unique()
@@ -735,7 +735,7 @@ def get_recommendations_for_user(model, user_id, user_encoder, item_encoder, ite
 
 **Menampilkan Rekomendasi untuk Pengguna Tertentu**
 
-Sekarang kita bisa mendapatkan rekomendasi untuk pengguna tertentu (misalnya pengguna dengan `user_id=123`).
+Sekarang bisa mendapatkan rekomendasi untuk pengguna tertentu (misalnya pengguna dengan `user_id=123`).
 
 ```python
 recommendations = get_recommendations_for_user(
@@ -811,7 +811,7 @@ Monumen Jalesveva Jayamahe
 
 ## Evaluation
 
-Pada bagian ini, kita akan mengevaluasi dua metode rekomendasi yang digunakan dalam sistem ini: **Content-Based Filtering** (CBF) dan **Collaborative Filtering** (CF). Evaluasi dilakukan untuk memastikan kualitas dari rekomendasi yang diberikan oleh masing-masing metode, baik dari segi relevansi maupun akurasi.
+Pada bagian ini, akan mengevaluasi dua metode rekomendasi yang digunakan dalam sistem ini: **Content-Based Filtering** (CBF) dan **Collaborative Filtering** (CF). Evaluasi dilakukan untuk memastikan kualitas dari rekomendasi yang diberikan oleh masing-masing metode, baik dari segi relevansi maupun akurasi.
 
 ### 1. **Evaluasi Content-Based Filtering**
 
@@ -832,7 +832,7 @@ Content-Based Filtering (CBF) memberikan rekomendasi berdasarkan kemiripan konte
 #### **Langkah Evaluasi**
 
 1. **Mendefinisikan Data Relevan (true\_relevant)**:
-   Data relevan ini berisi tempat-tempat yang seharusnya direkomendasikan oleh sistem berdasarkan pengetahuan yang ada. Dalam contoh ini, kita mendefinisikan `true_relevant` yang berisi tempat wisata yang relevan dengan preferensi pengguna.
+   Data relevan ini berisi tempat-tempat yang seharusnya direkomendasikan oleh sistem berdasarkan pengetahuan yang ada. Dalam contoh ini, mendefinisikan `true_relevant` yang berisi tempat wisata yang relevan dengan preferensi pengguna.
 
    Contoh:
 
@@ -841,7 +841,7 @@ Content-Based Filtering (CBF) memberikan rekomendasi berdasarkan kemiripan konte
    ```
 
 2. **Mendapatkan Rekomendasi**:
-   Sistem memberikan rekomendasi berdasarkan metode Content-Based Filtering, dan kita memilih 3 rekomendasi teratas.
+   Sistem memberikan rekomendasi berdasarkan metode Content-Based Filtering, dan memilih 3 rekomendasi teratas.
 
    ```python
    recommended_places = recommend_place_content_based_filtering('Taman Bungkul', similarity, data_content_based_filtering)
@@ -907,7 +907,7 @@ Nilai RMSE yang lebih rendah menunjukkan bahwa prediksi model semakin akurat men
 #### **Langkah Evaluasi**
 
 1. **Mempersiapkan Data RMSE**:
-   Kita akan memplot **RMSE** selama proses pelatihan untuk memantau apakah model mengalami overfitting atau underfitting. RMSE dihitung selama proses pelatihan pada data training dan validasi.
+   akan memplot **RMSE** selama proses pelatihan untuk memantau apakah model mengalami overfitting atau underfitting. RMSE dihitung selama proses pelatihan pada data training dan validasi.
 
 2. **Plotting RMSE**:
    Grafik ini menunjukkan nilai RMSE untuk data training dan validasi sepanjang epoch pelatihan. RMSE yang lebih rendah menunjukkan bahwa model lebih baik dalam memprediksi rating dengan akurasi tinggi.
@@ -971,7 +971,7 @@ Evaluasi menggunakan **Precision dan Recall** untuk Content-Based Filtering memb
 ## Conclusion
 Sistem **Rekomendasi Destinasi Wisata Surabaya** berhasil dikembangkan dengan dua pendekatan utama, yaitu **Content-Based Filtering** dan **Collaborative Filtering** menggunakan deep learning.
 
-Proyek ini dimulai dengan pemahaman data (Data Understanding), yang mencakup analisis data mengenai destinasi wisata, rating pengguna, dan kategori wisata di Surabaya. Melalui Exploratory Data Analysis (EDA), diperoleh wawasan penting, seperti tempat wisata yang paling banyak dikunjungi dan distribusi kategori wisata di kota tersebut. Selanjutnya, pada tahap data preprocessing, kami membersihkan dan memfilter data untuk memastikan kualitasnya. Fokus utama pada tahap ini adalah menangani nilai yang hilang, menghapus duplikasi, dan memfilter data yang relevan untuk destinasi wisata di Surabaya.
+Proyek ini dimulai dengan pemahaman data (Data Understanding), yang mencakup analisis data mengenai destinasi wisata, rating pengguna, dan kategori wisata di Surabaya. Melalui Exploratory Data Analysis (EDA), diperoleh wawasan penting, seperti tempat wisata yang paling banyak dikunjungi dan distribusi kategori wisata di kota tersebut. Selanjutnya, pada tahap data preprocessing, dilakukan pemersihkan dan pemfilteran data untuk memastikan kualitasnya. Fokus utama pada tahap ini adalah menangani nilai yang hilang, menghapus duplikasi, dan memfilter data yang relevan untuk destinasi wisata di Surabaya.
 
 Setelah data siap, sistem rekomendasi ini dibangun dengan dua pendekatan utama yang dapat memberikan hasil rekomendasi yang lebih akurat dan relevan untuk pengguna, yaitu **Content-Based Filtering** dan **Collaborative Filtering**. Kedua pendekatan ini memiliki kelebihan masing-masing dalam memberikan rekomendasi berdasarkan karakteristik destinasi atau pola interaksi antar pengguna.
 
