@@ -344,9 +344,7 @@ Kolom **Price**, **Place\_Ratings**, **Description**, **Category**, dan **City**
 * **Term Frequency (TF):**
   Rumus untuk menghitung **Term Frequency** adalah sebagai berikut:
 
-  $$
-  \text{TF}(t, d) = \frac{\text{Jumlah kemunculan kata t dalam dokumen d}}{\text{Jumlah kata dalam dokumen d}}
-  $$
+  $$\text{TF}(t, d) = \frac{\text{Jumlah kemunculan kata t dalam dokumen d}}{\text{Jumlah kata dalam dokumen d}}$$
 
   Dimana:
 
@@ -358,9 +356,7 @@ Kolom **Price**, **Place\_Ratings**, **Description**, **Category**, dan **City**
 * **Inverse Document Frequency (IDF):**
   Rumus untuk menghitung **Inverse Document Frequency** adalah:
 
-  $$
-  \text{IDF}(t) = \log \left( \frac{N}{df(t)} \right)
-  $$
+  $$\text{IDF}(t) = \log \left( \frac{N}{df(t)} \right)$$
 
   Dimana:
 
