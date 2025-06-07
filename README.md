@@ -967,7 +967,7 @@ Evaluasi menggunakan **Precision dan Recall** untuk Content-Based Filtering memb
 ---
 
 ## Conclusion
-Sistem **Rekomendasi Destinasi Wisata Surabaya** berhasil dikembangkan dengan menggabungkan dua pendekatan utama, yaitu **Content-Based Filtering** dan **Collaborative Filtering** menggunakan deep learning.
+Sistem **Rekomendasi Destinasi Wisata Surabaya** berhasil dikembangkan dengan dua pendekatan utama, yaitu **Content-Based Filtering** dan **Collaborative Filtering** menggunakan deep learning.
 
 Proyek ini dimulai dengan pemahaman data (Data Understanding), yang mencakup analisis data mengenai destinasi wisata, rating pengguna, dan kategori wisata di Surabaya. Melalui Exploratory Data Analysis (EDA), diperoleh wawasan penting, seperti tempat wisata yang paling banyak dikunjungi dan distribusi kategori wisata di kota tersebut. Selanjutnya, pada tahap data preprocessing, kami membersihkan dan memfilter data untuk memastikan kualitasnya. Fokus utama pada tahap ini adalah menangani nilai yang hilang, menghapus duplikasi, dan memfilter data yang relevan untuk destinasi wisata di Surabaya.
 
