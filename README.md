@@ -368,9 +368,7 @@ Kolom **Price**, **Place\_Ratings**, **Description**, **Category**, dan **City**
 * **TF-IDF:**
   Setelah menghitung **TF** dan **IDF**, kita bisa menggabungkannya untuk menghitung **TF-IDF** kata dalam sebuah dokumen:
 
-  $$
-  \text{TF-IDF}(t, d) = \text{TF}(t, d) \times \text{IDF}(t)
-  $$
+  $$\text{TF-IDF}(t, d) = \text{TF}(t, d) \times \text{IDF}(t)$$
 
   **Contoh**: Jika **TF** untuk kata "pantai" adalah 0.05 dan **IDF** untuk kata "pantai" adalah 1.69897, maka **TF-IDF** untuk kata "pantai" adalah $0.05 \times 1.69897 = 0.08495$.
 
